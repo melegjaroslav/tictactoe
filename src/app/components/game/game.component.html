@@ -1,0 +1,34 @@
+<div class="toolbar">
+  <input type="text" #playerOneRef [value]="playerOne$ | async">
+  <button (click)="toggleBoardTwo()">Toggle Board Two</button>
+  <button (click)="resetGame()">Reset Game</button>
+  <input type="text" #playerTwoRef [value]="playerTwo$ | async">
+</div>
+
+<div class="boards">
+  <div class="boards__wrapper">
+    <app-board [cells]="boardOneCells$ | async"
+      [outcome]="boardOneOutcome$ | async"
+      (cell)="onCellSelect('boardOne', $event)"></app-board>
+    <app-stats [turn]="boardOneTurn$ | async"
+      [playerOne]="playerOne$ | async"
+      [playerTwo]="playerTwo$ | async"
+      [playerOneSymbol]="boardOnePlayerOneSymbol$ | async"
+      [playerTwoSymbol]="boardOnePlayerTwoSymbol$ | async"
+      [winner]="boardOneWinner$ | async"
+      [outcome]="boardOneOutcome$ | async"></app-stats>
+  </div>
+  <div class="boards__wrapper" *ngIf="isBoardTwoEnabled">
+    <app-board [cells]="boardTwoCells$ | async"
+      [outcome]="boardTwoOutcome$ | async"
+      (cell)="onCellSelect('boardTwo', $event)"></app-board>
+    <app-stats [turn]="boardTwoTurn$ | async"
+      [playerOne]="playerOne$ | async"
+      [playerTwo]="playerTwo$ | async"
+      [playerOneSymbol]="boardTwoPlayerOneSymbol$ | async"
+      [playerTwoSymbol]="boardTwoPlayerTwoSymbol$ | async"
+      [winner]="boardTwoWinner$ | async"
+      [outcome]="boardTwoOutcome$ | async"></app-stats>
+  </div>
+</div>
+

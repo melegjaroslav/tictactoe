@@ -1,0 +1,12 @@
+<div class="sign-in">
+  <form novalidate [formGroup]="playersForm" class="sign-in__form">
+    <input type="text"
+      formControlName="playerOne"
+      (click)="$event.target.select()">
+    <input type="text"
+      formControlName="playerTwo"
+      (click)="$event.target.select()">
+
+    <button type="submit" (click)="signIn()">Sign In</button>
+  </form>
+</div>

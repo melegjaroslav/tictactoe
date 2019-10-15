@@ -1,0 +1,18 @@
+<div class="stats">
+  <span class="stats__title">Turn: </span>
+  <span class="stats__value">{{ getTurn() }}</span>
+</div>
+<div class="stats">
+  <span class="stats__title">{{ playerOne }}'s' Symbol:</span>
+  <span class="stats__value">{{ playerOneSymbol }}</span>
+</div>
+<div class="stats">
+  <span class="stats__title">{{ playerTwo }}'s' Symbol:</span>
+  <span class="stats__value">{{ playerTwoSymbol }}</span>
+</div>
+<div class="stats" *ngIf="outcome === 'win'">
+  <span class="stats__value stats__value--outcome">{{ getWinner() }} WON!!!</span>
+</div>
+<div class="stats" *ngIf="outcome === 'draw'">
+  <span class="stats__value stats__value--outcome">DRAW</span>
+</div>

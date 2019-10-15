@@ -1,0 +1,44 @@
+<table class="board" [class.board--draw]="outcome === 'draw'">
+  <tr>
+    <td class="board__cell board__cell--top-left"
+      [class.board__cell--win]="cells[0][1] === 'win'"
+      [class.board__cell--illegal]="cells[0][1] === 'illegal'"
+      (click)="onCellClick(0)">{{ cells[0][0] }}</td>
+    <td class="board__cell board__cell--top-center"
+      [class.board__cell--win]="cells[1][1] === 'win'"
+      [class.board__cell--illegal]="cells[1][1] === 'illegal'"
+      (click)="onCellClick(1)">{{ cells[1][0] }}</td>
+    <td class="board__cell board__cell--top-right"
+      [class.board__cell--win]="cells[2][1] === 'win'"
+      [class.board__cell--illegal]="cells[2][1] === 'illegal'"
+      (click)="onCellClick(2)">{{ cells[2][0] }}</td>
+  </tr>
+  <tr>
+    <td class="board__cell board__cell--center-left"
+      [class.board__cell--win]="cells[3][1] === 'win'"
+      [class.board__cell--illegal]="cells[3][1] === 'illegal'"
+      (click)="onCellClick(3)">{{ cells[3][0] }}</td>
+    <td class="board__cell board__cell--center-center"
+      [class.board__cell--win]="cells[4][1] === 'win'"
+      [class.board__cell--illegal]="cells[4][1] === 'illegal'"
+      (click)="onCellClick(4)">{{ cells[4][0] }}</td>
+    <td class="board__cell board__cell--center-right"
+      [class.board__cell--win]="cells[5][1] === 'win'"
+      [class.board__cell--illegal]="cells[5][1] === 'illegal'"
+      (click)="onCellClick(5)">{{ cells[5][0] }}</td>
+  </tr>
+  <tr>
+    <td class="board__cell board__cell--bottom-left"
+      [class.board__cell--win]="cells[6][1] === 'win'"
+      [class.board__cell--illegal]="cells[6][1] === 'illegal'"
+      (click)="onCellClick(6)">{{ cells[6][0] }}</td>
+    <td class="board__cell board__cell--bottom-center"
+      [class.board__cell--win]="cells[7][1] === 'win'"
+      [class.board__cell--illegal]="cells[7][1] === 'illegal'"
+      (click)="onCellClick(7)">{{ cells[7][0] }}</td>
+    <td class="board__cell board__cell--bottom-right"
+      [class.board__cell--win]="cells[8][1] === 'win'"
+      [class.board__cell--illegal]="cells[8][1] === 'illegal'"
+      (click)="onCellClick(8)">{{ cells[8][0] }}</td>
+  </tr>
+</table>

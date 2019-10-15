@@ -1,0 +1,14 @@
+.sign-in {
+  display: flex;
+  justify-content: center;
+
+  &__form {
+    display: flex;
+    flex-flow: column wrap;
+
+    &-submit {
+      align-self: center;
+      width: 80px;
+    }
+  }
+}
